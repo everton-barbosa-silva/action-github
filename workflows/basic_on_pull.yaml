@@ -1,12 +1,12 @@
 name: Github Actions - Pull Template Basic
 run-name: Sem Mundial - ${{ github.event_name }}
 
-on: 
+on:
   pull_request
 
 jobs:
-  on-push:
+  on-pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Comentario
+      - name: Comentário
         run: echo "Palmeiras não tem mundial"
