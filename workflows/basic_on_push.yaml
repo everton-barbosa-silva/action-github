@@ -5,6 +5,9 @@ on:
   push:
     paths: 
       - '**.txt'
+    branches:
+      - main
+      - master
 
 jobs: 
   on-push:
