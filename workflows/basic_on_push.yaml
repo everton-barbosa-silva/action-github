@@ -3,8 +3,8 @@ run-name: Running - ${{ github.event_name }}
 
 on: 
   push:
-    branches:
-      - main
+    paths: 
+      - '**.txt'
 
 jobs: 
   on-push:
