@@ -1,8 +1,8 @@
-name: Github action - Pull Template Basic
+name: Github Actions - Pull Template Basic
 run-name: Sem Mundial - ${{ github.event_name }}
 
 on: 
-  pull
+  pull_request
 
 jobs:
   on-push:
