@@ -5,9 +5,9 @@ on:
     inputs:
       browser:
         description: 'Selecione o navegador'
-        required: true
-        default: 'Chrome'
         type: string
+
+
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-22.04
