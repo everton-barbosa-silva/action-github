@@ -1,0 +1,11 @@
+name: Github Actions - Workflow run Basic Template
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_run:
+    workflows: ["Github Actions -Trigger 1"]
+jobs:
+  on-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Mensagem de log
+        run: echo "Palmeiras não tem mundial"
