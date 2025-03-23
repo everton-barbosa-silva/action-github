@@ -1,0 +1,17 @@
+name: Github Actions - Workflow dispatch Template Basic
+run-name: Running - ${{ github.event_name }}
+on: 
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Selecione o navegador'
+        required: true
+        default: 'Chrome'
+        type: string
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Mensagem de log
+        run: | 
+          echo "Palmeiras não tem mundial ${{inputs.browser}}"
