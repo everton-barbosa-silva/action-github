@@ -1,13 +1,12 @@
 name: Github Actions - Workflow run Basic Template
 run-name: Barbosa - ${{ github.event_name }}
-on:
-  workflow_run:
-    workflows: ["Github Actions - Trigger 1"]
-    types:
-      - completed    #requested, completed, in_progress
+on: [push, workflow_dispatch]
+env:
+  variavel: "Bom dia"
+  varr_1: 
 jobs:
   on-push:
     runs-on: ubuntu-20.04
     steps:
       - name: Mensagem de log
-        run: echo "Palmeiras não tem mundial"
+        run: echo "$variavel"
