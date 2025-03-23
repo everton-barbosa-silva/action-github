@@ -1,20 +1,17 @@
 name: Github Actions - Workflow dispatch Template Basic
-run-name: Running - ${{ github.event_name }}
+run-name: Rodando - ${{ github.event_name }}
 on: 
   workflow_dispatch:
     inputs:
-      tags:
-        description: Selecione a Tag 
-        type: choice # poderia ser string ou bool 
-        options: 
-          - tag_1
-          - tag_2
-        default: tag_1
-        required: true
+      browser:
+        description: 'Selecione o navegador'
+        type: string
+
+
 jobs:
   on-workflow_dispatch:
     runs-on: ubuntu-22.04
     steps:
       - name: Mensagem de log
         run: | 
-          echo "Palmeiras não tem mundial ${{inputs.tags}}"
+          echo "Palmeiras não tem mundial ${{inputs.browser}}"
